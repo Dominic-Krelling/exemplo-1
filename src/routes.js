@@ -3,6 +3,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './pages/Home';
 import Busca from './pages/Busca';
@@ -10,6 +11,17 @@ import Perfil from './pages/Perfil';
 import Pedidos from './pages/Pedidos';
 
 const BottomTab = createBottomTabNavigator();
+
+const PerfilStack = createStackNavigator();
+
+function PerfilRoutes() {
+  return (
+    <PerfilStack.Navigator>
+      <PerfilStack.Screen name="Perfil" component={Perfil} />
+      <PerfilStack.Screen name="Pagamentos" component={Pagamentos} />
+    </PerfilStack.Navigator>
+  );
+} 
 
 export default function Routes() {
   return (
@@ -60,6 +72,7 @@ export default function Routes() {
             ),
           }}
         />
+        
       </BottomTab.Navigator>
     </NavigationContainer>
   );

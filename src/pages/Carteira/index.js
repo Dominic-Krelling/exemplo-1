@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Busca(){
     return (
         <View style={styles.container}>
-            <Text>Busca</Text>
+            <Text>grana</Text>
         </View>
     )
 }
