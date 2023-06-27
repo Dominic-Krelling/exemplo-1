@@ -1,17 +1,17 @@
 import React from "react";
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, styleSheet } from "react-native-web";
 
-export default function Busca(){
+export default function Carteira() {
     return (
         <View style={styles.container}>
-            <Text>grana</Text>
+            <Text>Carteira</Text>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex:1,
+        flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
